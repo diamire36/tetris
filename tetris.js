@@ -10,7 +10,7 @@ var setBg, getNodes
   setBg = function () {
     nodes.cube2x2.style.background = colors[countPress++]
 
-    if (countPress === 4) // в js используем === и !==
+    if (countPress === 4)
       countPress = 0
   }
 
