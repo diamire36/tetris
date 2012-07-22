@@ -1,16 +1,14 @@
 var setBg
 
 (function () { // создаём анонимную функцию, чтобы спрятать переменные
-  var countPress = 1
+  var countPress = 0
+
+  var colors = ['red', 'green', 'blue', 'white']
 
   setBg = function () {
-    var newColor
-    switch (countPress++) {
-      case 2: newColor = 'red'; break
-      case 3: newColor = 'green'; break
-      case 4: newColor = 'blue'; break
-      case 5: newColor = 'white'; countPress = 1
-    }
-    document.bgColor = newColor
+    document.bgColor = colors[countPress++]
+
+    if (countPress === 4) // в js используем === и !==
+      countPress = 0
   }
 })()
