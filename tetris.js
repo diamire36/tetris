@@ -1,15 +1,20 @@
-var setBg
+var setBg, getNodes
 
 (function () {
   var countPress = 0
 
-  var colors = ['red', 'green', 'blue', 'white']
+  var colors = ['red', 'green', 'blue', 'yellow']
+
+  var nodes = {}
 
   setBg = function () {
-    // используем css стиль вместо inline аттрибутов. важно!
-    document.body.style.background = colors[countPress++]
+    nodes.cube2x2.style.background = colors[countPress++]
 
     if (countPress === 4) // в js используем === и !==
       countPress = 0
+  }
+
+  getNodes = function () {
+    nodes.cube2x2 = document.getElementsByClassName('cube5')[0]
   }
 })()
