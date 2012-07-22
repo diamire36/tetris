@@ -14,7 +14,14 @@ var setBg, getNodes
       countPress = 0
   }
 
-  getNodes = function () {
+  main = function () {
     nodes.cube2x2 = document.getElementsByClassName('cube5')[0]
+
+    var colorButton = document.getElementById('but_1')
+
+    colorButton.addEventListener('click', function (event) {
+      event.preventDefault()
+      setBg()
+    })
   }
 })()
