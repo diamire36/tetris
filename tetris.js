@@ -1,6 +1,6 @@
 var countPress = 1
 
-function setBg ()
+var setBg = function ()
 {
   var newColor
   switch (countPress++)
